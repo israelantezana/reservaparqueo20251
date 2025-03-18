@@ -1,0 +1,42 @@
+Descripcion de problema
+==========
+Una ciudad está implementando un sistema de reservas para estacionamientos en zonas con alta demanda. Se requiere desarrollar un método que determine si una reserva es válida y calcule el precio total de la reserva.
+Reglas del sistema:
+    (3)-La duración mínima de una reserva es 1 hora, y la máxima es 6 horas.
+    (4)-Si un usuario reserva más de 3 horas seguidas, obtiene un 10% de descuento sobre el total.
+    (2, 3)-El sistema debe rechazar reservas con horarios inválidos o fuera del rango permitido.
+    (2)- Solo se pueden hacer reservas entre 6:00 AM y 10:00 PM.
+    (1) -El estacionamiento cobra $5 por hora.
+    (5)-Si una reserva se hace en horario pico (7:00 AM - 9:00 AM o 5:00 PM - 7:00 PM), hay
+     un recargo del 20%.
+
+
+Plan de Pruebas
+======
+(1) Casos Basico:
+    calcularPrecioReseva(6, 1) =>  5
+    calcularPrecioReserva(7, 2) => 10
+(2) Caso reservas fuera de hora:
+    calcularPrecioReseva(5, 1) =>  "Error, hora no permitida"
+    calcularPrecioReseva(11, 2) =>  "Error, hora no permitida"
+(3) Caso de reserva minima y maxima:
+    calcularPrecioReseva(7, 0) =>  "Error, la duracion minima debe ser de 1 a 6 horas"
+    calcularPrecioReseva(8, 7) =>  "Error, la duracion minima debe ser de 1 a 6 horas"
+(4) Caso descuentos
+    ...
+    ...
+(5) Caso recargo de precio hora pico
+    ...
+    ...
+
+
+
+- validar si la reserva es de al menos una hora y no exceda las 6 horas
+- reservar un espacio por una hora, en una hora valida que no sea hora pico
+- reservar un espacio por 3 horas dentro de una hora valida que no sea hora pico
+- reservar un espacio por una hora en una hora valida en horario pico
+- reservar un espacio por 4 horas en una hora valida y que llegue a horario pico
+- reservar un espacio por 6 horas que cumplas las condiciones de hora normal y horario pic}
+
+
+
