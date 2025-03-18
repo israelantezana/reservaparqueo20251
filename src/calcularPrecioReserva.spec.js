@@ -18,6 +18,9 @@ describe("CalcularPrecioReserva", () => {
   it("deberia mostrar error si la hora es menor a las 6am", () => {
     expect(()=> calcularPrecioReserva(5, 1)).toThrow("Error, hora no permitida");
   });
+  it("deberia mostrar error si la hora es mayor a 10pm", () => {
+    expect(()=> calcularPrecioReserva(23, 1)).toThrow("Error, hora no permitida");
+  });
 });
 
 
